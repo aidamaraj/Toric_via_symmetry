@@ -7,12 +7,10 @@ def rank_poly(M):
     for i in range(len(R.gens())):
         D[R.gens()[i]]=QQ.random_element(num_bound=10^3,den_bound=10^3)
     rank1=M.subs(D).rank()
-
     D={}
     for i in range(len(R.gens())):
         D[R.gens()[i]]=QQ.random_element(num_bound=10^3,den_bound=10^3)
     rank2=M.subs(D).rank()
-
     return max(rank1,rank2)
 
 def monomial_generator(variables, degree):
